@@ -1,5 +1,5 @@
-from aoe2de_rms_genobj_parser.const import *
-from aoe2de_rms_genobj_parser.parsers import ParserGeneratingObjects, ParserRMSFile
+from aoe2de_rms_gen_obj_parser.const import *
+from aoe2de_rms_gen_obj_parser.parsers import ParserGeneratingObjects, ParserRMSFile
 
 
 class GeneratingObjectsParser:

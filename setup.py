@@ -6,9 +6,9 @@ with open('README.rst') as f:
 setuptools.setup(
     author="Grégoire Fruleux",
     author_email="gregoire.fruleux.pro@gmail.com",
-    name='aoe2de_rms_genobj_parser',
+    name='aoe2de_rms_gen_obj_parser',
     license="MIT",
-    description='aoe2de_rms_genobj_parser is a python package to parser Age of Empires2: Definitive Edition RMS',
+    description='aoe2de_rms_gen_obj_parser is a python package to parser Age of Empires2: Definitive Edition RMS',
     version='v1.0.0',
     long_description=README,
     url='https://github.com/gfruleux/aoe2de_rms_genobj_parser',

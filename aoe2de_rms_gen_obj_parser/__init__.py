@@ -1,6 +1,6 @@
 import argparse
 
-from aoe2de_rms_genobj_parser.genobj import (
+from aoe2de_rms_gen_obj_parser.genobj import (
     GeneratingObjectsParser,
 )
 

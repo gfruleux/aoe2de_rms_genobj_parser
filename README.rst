@@ -8,13 +8,13 @@ Installation
 ============
 .. code-block:: bash
 
-  pip install aoe2de_rms_genobj_parser
+  pip install aoe2de_rms_gen_obj_parser
 
 Basic usage
 ===========
 .. code-block:: python
 
-  from aoe2de_rms_genobj_parser import GeneratingObjectsParser
+  from aoe2de_rms_gen_obj_parser import GeneratingObjectsParser
   # We instantiate the GeneratingObjectsParser with 2 of the 5 arguments (both are mandatory paths)
   parser = GeneratingObjectsParser("Path/to/GeneratingObjects.inc", "Path/to/SomeRandomMapScript.rms")
 
@@ -35,9 +35,9 @@ Two are <<mandatory>> *(they won't have default values)*:
 
 The three others are <<optional>> *(they have default values)* but must respect defined values:
 
-* ``map_size``, must be a member of ``aoe2de_rms_genobj_parser.const.MAP_SIZE_IDX``
-* ``map_resources``, must be a member of ``aoe2de_rms_genobj_parser.const.MAP_RESOURCES_IDX``
-* ``game_type``, must be a member of ``aoe2de_rms_genobj_parser.const.GAME_TYPE_IDX``
+* ``map_size``, must be a member of ``aoe2de_rms_gen_obj_parser.const.MAP_SIZE_IDX``
+* ``map_resources``, must be a member of ``aoe2de_rms_gen_obj_parser.const.MAP_RESOURCES_IDX``
+* ``game_type``, must be a member of ``aoe2de_rms_gen_obj_parser.const.GAME_TYPE_IDX``
 
 By default, these are set to ``NORMAL_MAP``, ``DEFAULT_RESOURCES`` and ``RANDOM_GAME``
 

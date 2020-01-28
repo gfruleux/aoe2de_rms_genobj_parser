@@ -1,7 +1,7 @@
 import ntpath
 from typing import List
 
-from aoe2de_rms_genobj_parser.blocks import BlockLine, BlockIf, BlockElseIf, BlockElse, _BlockCMD
+from aoe2de_rms_gen_obj_parser.blocks import BlockLine, BlockIf, BlockElseIf, BlockElse, _BlockCMD
 
 
 class ParserGeneratingObjects:
