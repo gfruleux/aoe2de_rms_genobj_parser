@@ -4,7 +4,9 @@ from aoe2de_rms_gen_obj_parser.parsers import ParserGeneratingObjects, ParserRMS
 
 class GeneratingObjectsParser:
     def __init__(self, path_gen_obj=None, path_rms_file=None,
-                 map_size=MAP_SIZE_IDX[3], map_resources=MAP_RESOURCES_IDX[3], game_type=GAME_TYPE_IDX[0]):
+                 map_size=get_dict_first_key(MAP_SIZE_DICT),
+                 map_resources=get_dict_first_key(MAP_RESOURCES_DICT),
+                 game_type=get_dict_first_key(GAME_TYPE_DICT)):
         # ### Set Paths
         self._path_gen = path_gen_obj
         self._path_rms = path_rms_file
