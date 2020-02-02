@@ -39,7 +39,7 @@ The three others are <<optional>> *(they have default values)* but must respect 
 * ``map_resources``, **must be a key of** ``aoe2de_rms_gen_obj_parser.const.MAP_RESOURCES_DICT``
 * ``game_type``, **must be a key of** ``aoe2de_rms_gen_obj_parser.const.GAME_TYPE_DICT``
 
-By default, these are set to ``NORMAL_MAP``, ``DEFAULT_RESOURCES`` and ``RANDOM_GAME``
+By default, these are set to ``TINY_MAP``, ``OTHER_RESOURCES`` and ``OTHER_GAME``
 
 Because the attributes can be changed at will *(setters exposed)*, the files must be parsed first with ``run_parsers()``
 before asking for a result with ``get_result()``
