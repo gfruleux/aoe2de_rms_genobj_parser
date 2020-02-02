@@ -6,7 +6,10 @@ class GeneratingObjectsParser:
     def __init__(self, path_gen_obj=None, path_rms_file=None,
                  map_size=get_dict_first_key(MAP_SIZE_DICT),
                  map_resources=get_dict_first_key(MAP_RESOURCES_DICT),
-                 game_type=get_dict_first_key(GAME_TYPE_DICT)):
+                 game_type=get_dict_first_key(GAME_TYPE_DICT),
+                 preface_out=False):
+
+        self._preface_out = preface_out
         # ### Set Paths
         self._path_gen = path_gen_obj
         self._path_rms = path_rms_file
@@ -47,6 +50,8 @@ class GeneratingObjectsParser:
 
     def get_result(self) -> str:
         out = ""
+        if self._preface_out:
+            out += "/* " + self._map_size + " " + self._map_res + " " + self._game_type + " */\n\n"
         for cmd in self._parser_obj.get_result():
             out += cmd.display(self._parser_rms.get_result())
         return out
