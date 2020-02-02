@@ -15,7 +15,7 @@ Basic usage
 .. code-block:: python
 
   from aoe2de_rms_gen_obj_parser import GeneratingObjectsParser
-  # We instantiate the GeneratingObjectsParser with 2 of the 5 arguments (both are mandatory paths)
+  # We instantiate the GeneratingObjectsParser
   parser = GeneratingObjectsParser("Path/to/GeneratingObjects.inc", "Path/to/SomeRandomMapScript.rms")
 
   # We must run the parsers each time an attribute is set, in order to update them
@@ -35,14 +35,27 @@ Two are <<mandatory>> *(they won't have default values)*:
 
 The three others are <<optional>> *(they have default values)* but must respect defined values:
 
-* ``map_size``, must be a member of ``aoe2de_rms_gen_obj_parser.const.MAP_SIZE_IDX``
-* ``map_resources``, must be a member of ``aoe2de_rms_gen_obj_parser.const.MAP_RESOURCES_IDX``
-* ``game_type``, must be a member of ``aoe2de_rms_gen_obj_parser.const.GAME_TYPE_IDX``
+* ``map_size``, **must be a key of** ``aoe2de_rms_gen_obj_parser.const.MAP_SIZE_DICT``
+* ``map_resources``, **must be a key of** ``aoe2de_rms_gen_obj_parser.const.MAP_RESOURCES_DICT``
+* ``game_type``, **must be a key of** ``aoe2de_rms_gen_obj_parser.const.GAME_TYPE_DICT``
 
 By default, these are set to ``NORMAL_MAP``, ``DEFAULT_RESOURCES`` and ``RANDOM_GAME``
 
 Because the attributes can be changed at will *(setters exposed)*, the files must be parsed first with ``run_parsers()``
 before asking for a result with ``get_result()``
+
+.. code-block:: python
+
+  from aoe2de_rms_gen_obj_parser import GeneratingObjectsParser
+  # We instantiate the GeneratingObjectsParser
+  parser = GeneratingObjectsParser()
+  ... <some code>
+  parser.set_path_gen_obj("Path/to/GeneratingObjects.inc")
+  parser.set_path_rms_file("Path/to/SomeRandomMapScript.rms")
+  ... <some code>
+  parser.set_map_size("LARGE_MAP")
+  parser.run_parsers()
+  parsed_content = parser.get_result()
 
 Information about **GeneratingObjects.inc**
 ====================================================
